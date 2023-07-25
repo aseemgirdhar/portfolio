@@ -20,14 +20,14 @@ import videoIcon from '../assets/images/motion-graphic/video-icon.svg';
 import WFH from '../assets/images/motion-graphic/wfh-thumbnail.png';
 import WFHAnimation from '../assets/images/motion-graphic/WFH.mp4';
 
-import feedback from '../assets/images/motion-graphic/feedback-thumbnail.png';
-import msDhoni from '../assets/images/motion-graphic/dhoni-thumbnail.png';
-import gift from '../assets/images/motion-graphic/gift-thumbnail.png';
+// import feedback from '../assets/images/motion-graphic/feedback-thumbnail.png';
+// import msDhoni from '../assets/images/motion-graphic/dhoni-thumbnail.png';
+// import gift from '../assets/images/motion-graphic/gift-thumbnail.png';
 
-import diwali from '../assets/images/motion-graphic/diwali-thumbnail.png';
-import ipl from '../assets/images/motion-graphic/ipl-thumbnail.png';
-import qr from '../assets/images/motion-graphic/qr-thumbnail.png';
-import Annergetic from '../assets/images/motion-graphic/Annergetic-thumbnail.png';
+// import diwali from '../assets/images/motion-graphic/diwali-thumbnail.png';
+// import ipl from '../assets/images/motion-graphic/ipl-thumbnail.png';
+// import qr from '../assets/images/motion-graphic/qr-thumbnail.png';
+// import Annergetic from '../assets/images/motion-graphic/Annergetic-thumbnail.png';
 
 const Home = () => {
 	useEffect(() => {
@@ -91,10 +91,10 @@ const Home = () => {
 		};
 	}, []);
 
-	const playVideo = () => {
-		var v = document.getElementsByTagName('video')[0];
-		v?.play();
-	};
+	// const playVideo = () => {
+	// 	var v = document.getElementsByTagName('video')[0];
+	// 	v?.play();
+	// };
 	return (
 		<div className='container'>
 			<div className='banner'>
