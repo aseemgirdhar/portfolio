@@ -1,0 +1,110 @@
+body {
+	background: linear-gradient(
+		82deg,
+		#f9fbff 0.15%,
+		#f0f6ff 29.39%,
+		#f8fef5 57.62%,
+		#fcfff9 100%
+	);
+	height: 100vh;
+}
+img {
+	max-width: 100%;
+}
+.banner-text {
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	h4 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 56px;
+		font-style: normal;
+	}
+	h1 {
+		font-family: 'averta';
+		font-size: 72px;
+		font-weight: 500;
+	}
+	button {
+		background: #151e2c;
+		color: #fff;
+		height: 56px;
+		padding: 0 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 56px;
+	}
+}
+.projects {
+	border-radius: 16px;
+	margin-bottom: 64px;
+	.banner-radius{
+		border-radius: 0 16px 16px 0;
+	}
+	.logo-bg{
+		background: linear-gradient(
+			315deg,
+			rgba(191, 217, 255, 0.7) 0%,
+			rgba(211, 229, 255, 0.31) 100%
+		);
+	}
+	.logo-bg-1{
+		background: linear-gradient(135deg, rgba(194, 241, 255, 0.70) 0%, rgba(192, 216, 254, 0.70) 100%);
+	}
+	.logo-bg-2{
+		background: linear-gradient(135deg, rgba(255, 235, 235, 0.70) 0%, rgba(255, 252, 235, 0.70) 33.33%, rgba(235, 255, 235, 0.70) 66.67%, rgba(235, 246, 255, 0.70) 100%);
+	}
+	.logo-bg-3{
+		background: linear-gradient(135deg, rgba(255, 153, 153, 0.70) 0%, rgba(255, 153, 153, 0.20) 100%);
+	}
+	.logo-bg-4{
+		background: linear-gradient(135deg, rgba(234, 198, 255, 0.42) 0%, rgba(250, 255, 228, 0.42) 50%, rgba(199, 196, 255, 0.42) 100%);
+	}
+	.logo-bg-5{
+		background: rgba(255, 242, 242, 0.80);
+	}
+	.logo {
+		padding: 0 40px;
+		border-radius: 16px 0 0 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+		font-size: 27px;
+		height: 100%;
+		flex-direction: column;
+		gap: 40px;
+		
+	}
+}
+.generic-title{
+	margin-top: 72px;
+	margin-bottom: 40px;
+	font-weight: 400;
+	font-size: 64px;
+	text-align: center;
+}
+.generic-subtitle{
+	font-size: 48px;
+	margin-bottom: 40px;
+	font-weight: 600;
+}
+.p-0{
+	padding: 0 !important;
+}
+.video-wrapper{
+	position: relative;
+	
+	.videoIcon{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+		z-index: 1;
+	}
+}
