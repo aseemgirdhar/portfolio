@@ -1,4 +1,4 @@
-import React, { useEffect , useRef } from 'react';
+import React, { useEffect } from 'react';
 import './Home.scss';
 import owner from '../assets/images/smart-boy.png';
 import arrow from '../assets/images/arrow.svg';
