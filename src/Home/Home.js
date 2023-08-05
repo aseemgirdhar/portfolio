@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Home.scss';
 import owner from '../assets/images/smart-boy.png';
 import arrow from '../assets/images/arrow.svg';
@@ -15,20 +15,34 @@ import specsCartBanner from '../assets/images/specskart-thumbnail.png';
 import sisucare from '../assets/images/sisucare-logo.svg';
 import sisucareBanner from '../assets/images/sisucare-thumbnail.png';
 import videoIcon from '../assets/images/motion-graphic/video-icon.svg';
+import pauseIcon from '../assets/images/motion-graphic/pause.jpg';
 
 // Motion Graphics
 import WFH from '../assets/images/motion-graphic/wfh-thumbnail.png';
 import WFHAnimation from '../assets/images/motion-graphic/WFH.mp4';
 
-// import feedback from '../assets/images/motion-graphic/feedback-thumbnail.png';
-// import msDhoni from '../assets/images/motion-graphic/dhoni-thumbnail.png';
-// import gift from '../assets/images/motion-graphic/gift-thumbnail.png';
+import feedback from '../assets/images/motion-graphic/feedback-thumbnail.png';
+import feedbackAnimation from '../assets/images/motion-graphic/Feedback.mp4';
+import msDhoni from '../assets/images/motion-graphic/dhoni-thumbnail.png';
+import msDhoniAnimation from '../assets/images/motion-graphic/dhoni.mp4';
 
-// import diwali from '../assets/images/motion-graphic/diwali-thumbnail.png';
-// import ipl from '../assets/images/motion-graphic/ipl-thumbnail.png';
-// import qr from '../assets/images/motion-graphic/qr-thumbnail.png';
-// import Annergetic from '../assets/images/motion-graphic/Annergetic-thumbnail.png';
+import gift from '../assets/images/motion-graphic/gift-thumbnail.png';
+import giftAnimation from '../assets/images/motion-graphic/Gift.mp4';
 
+import diwali from '../assets/images/motion-graphic/diwali-thumbnail.png';
+import diwaliAnimation from '../assets/images/motion-graphic/DIWALI.mp4';
+
+import ipl from '../assets/images/motion-graphic/ipl-thumbnail.png';
+import iplAnimation from '../assets/images/motion-graphic/ipl.mp4';
+
+import qr from '../assets/images/motion-graphic/qr-thumbnail.png';
+import qrAnimation from '../assets/images/motion-graphic/QR.mp4';
+
+import Annergetic from '../assets/images/motion-graphic/Annergetic-thumbnail.png';
+import AnnergeticAnimation from '../assets/images/motion-graphic/Annergetic.mp4';
+
+import about from '../assets/images/smart-boy-about.png';
+import Footer from '../Footer/Footer';
 const Home = () => {
 	useEffect(() => {
 		var TxtType = function (el, toRotate, period) {
@@ -91,11 +105,23 @@ const Home = () => {
 		};
 	}, []);
 
-	// const playVideo = () => {
-	// 	var v = document.getElementsByTagName('video')[0];
-	// 	v?.play();
+	const [playing, setplaying] = useState(null);
+	const videoRef = useRef([]);
+
+	const handlePlay = (type) => {
+		// setPlaying(videoRef.current[type].play() ? !playing : playing);
+		if (playing !== null) {
+			videoRef.current[playing].pause(); // Pause the previously playing video
+			setplaying(!playing);
+		}
+		setplaying(type);
+		videoRef.current[type].play();
+	};
+	// const handlePause = (playing) => {
+	// 	videoRef?.current[playing]?.pause(); // Pause the previously playing video
 	// };
 	return (
+		<>
 		<div className='container'>
 			<div className='banner'>
 				<div className='row'>
@@ -240,24 +266,171 @@ const Home = () => {
 							src={videoIcon}
 							alt='videoIcon'
 							className='videoIcon'
-							
+							onClick={() => handlePlay(0)}
 						/>
+
 						<video
-							id='sisuVideo'
+							ref={(el) => (videoRef.current[0] = el)}
 							width='100%'
-							poster={WFH}
-							onMouseOver={(event) => event.target.play()}
-							onMouseOut={(event) => event.target.pause()}>
+							poster={WFH}>
 							<source src={WFHAnimation} type='video/mp4' />
 						</video>
+
+						<div className='video-caption'>Work from home animation</div>
 					</div>
-					{/* 
-					<video controls>
-						<source src={WFHAnimation} />
-					</video> */}
+				</div>
+
+				<div className='col-3'>
+					<div class='video-wrapper'>
+						<img
+							src={videoIcon}
+							alt='videoIcon'
+							className='videoIcon'
+							onClick={() => handlePlay(1)}
+						/>
+						<video
+							ref={(el) => (videoRef.current[1] = el)}
+							width='100%'
+							poster={feedback}>
+							<source src={feedbackAnimation} type='video/mp4' />
+						</video>
+
+						<div className='video-caption'>Feedback Interaction</div>
+					</div>
+				</div>
+
+				<div className='col-3'>
+					<div class='video-wrapper'>
+						<img
+							src={videoIcon}
+							alt='videoIcon'
+							className='videoIcon'
+							onClick={() => handlePlay(2)}
+						/>
+						<video
+							ref={(el) => (videoRef.current[2] = el)}
+							width='100%'
+							poster={msDhoni}>
+							<source src={msDhoniAnimation} type='video/mp4' />
+						</video>
+						<div className='video-caption'>A Tribute to M.S. Dhoni</div>
+					</div>
+				</div>
+
+				<div className='col-3'>
+					<div class='video-wrapper'>
+						<img
+							src={videoIcon}
+							alt='videoIcon'
+							className='videoIcon'
+							onClick={() => handlePlay(3)}
+						/>
+						<video
+							ref={(el) => (videoRef.current[3] = el)}
+							width='100%'
+							poster={gift}>
+							<source src={giftAnimation} type='video/mp4' />
+						</video>
+						<div className='video-caption'>Gift Box Animation</div>
+					</div>
+				</div>
+
+				<div className='col-3'>
+					<div class='video-wrapper'>
+						<img
+							src={videoIcon}
+							alt='videoIcon'
+							className='videoIcon'
+							onClick={() => handlePlay(4)}
+						/>
+						<video
+							ref={(el) => (videoRef.current[4] = el)}
+							width='100%'
+							poster={diwali}>
+							<source src={diwaliAnimation} type='video/mp4' />
+						</video>
+						<div className='video-caption'>Happy Diwali Animation</div>
+					</div>
+				</div>
+
+				<div className='col-3'>
+					<div class='video-wrapper'>
+						<img
+							src={videoIcon}
+							alt='videoIcon'
+							className='videoIcon'
+							onClick={() => handlePlay(5)}
+						/>
+						<video
+							ref={(el) => (videoRef.current[5] = el)}
+							width='100%'
+							poster={qr}>
+							<source src={qrAnimation} type='video/mp4' />
+						</video>
+						<div className='video-caption'>QR Code Scan Animation</div>
+					</div>
+				</div>
+
+				<div className='col-3'>
+					<div class='video-wrapper'>
+						<img
+							src={videoIcon}
+							alt='videoIcon'
+							className='videoIcon'
+							onClick={() => handlePlay(6)}
+						/>
+						<video
+							ref={(el) => (videoRef.current[6] = el)}
+							width='100%'
+							poster={ipl}>
+							<source src={iplAnimation} type='video/mp4' />
+						</video>
+						<div className='video-caption'>IPL Animation</div>
+					</div>
+				</div>
+
+				<div className='col-3'>
+					<div class='video-wrapper'>
+						<img
+							src={videoIcon}
+							alt='videoIcon'
+							className='videoIcon'
+							onClick={() => handlePlay(7)}
+						/>
+						<video
+							ref={(el) => (videoRef.current[7] = el)}
+							width='100%'
+							poster={Annergetic}>
+							<source src={AnnergeticAnimation} type='video/mp4' />
+						</video>
+						<div className='video-caption'>Annergetic Animation</div>
+					</div>
+				</div>
+			</div>
+
+			<div className='aboutme-wrapper'>
+				<div className='aboutme-text'>
+					<h2>About me</h2>
+					<p>
+						<span>Hello</span> , I'm Sanjay Arora, a passionate UI/UX designer
+						with a love for problem-solving and crafting intuitive interfaces.
+						With 2 years of experience in UX design and 2 years of experience in
+						Motion Graphics, I specialize in creating seamless digital
+						experiences that engage and delight users. My expertise lies in user
+						research, information architecture, interaction design, and visual
+						aesthetics. Through my designs, I strive to simplify complex ideas
+						and bring them to life in an aesthetically pleasing and
+						user-friendly manner.
+					</p>
+				</div>
+				<div className='aboutme-img'>
+					<img src={about} />
 				</div>
 			</div>
 		</div>
+		
+		</>
+
 	);
 };
 

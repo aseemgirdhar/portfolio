@@ -1,0 +1,190 @@
+.x-timeline-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.x-timeline-item {
+	flex-direction: row-reverse;
+}
+
+.x-timeline-item:last-of-type {
+	margin-bottom: 0;
+}
+
+.x-timeline-item_marker {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	flex-grow: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	border: 2px solid #c5e9cc;
+}
+
+.x-timeline-item_marker-inner {
+	// background: #fff;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100%;
+	width: 15px;
+	height: 15px;
+	position: relative;
+	z-index: 1;
+	// border: 2px solid #C5E9CC;
+}
+
+.x-timeline-item_marker::before {
+	position: absolute;
+	// top: 0;
+	// bottom: -40px;
+	width: var(--x-line-width);
+	content: '';
+	background: #dae0e5;
+	margin-top: 75px;
+	height: 35px;
+	border-radius: 8px;
+}
+
+.x-timeline-item:first-of-type .x-timeline-item_marker::before {
+	// top: 50%;
+}
+
+.x-timeline-item:last-of-type .x-timeline-item_marker::before {
+	// bottom: 50%;
+}
+
+.x-timeline_alt-odd .x-timeline-item:nth-of-type(2n-1) {
+	flex-direction: row-reverse;
+}
+
+.x-timeline_alt-even .x-timeline-item:nth-of-type(2n) {
+	flex-direction: row-reverse;
+}
+
+.x-timeline-item_content {
+	flex-basis: var(--x-content-width);
+	min-width: 25%;
+}
+
+.x-timeline-item_content-inner {
+	a{
+		text-decoration: none;
+		color: #151e2c;
+	}
+	// padding: 30px;
+	// border: 1px solid #eee;
+	// background-color: #fff;
+}
+
+.x-timeline-item_meta {
+	flex-basis: var(--x-metacontent-width);
+}
+
+.x-timeline_line {
+	position: absolute;
+	width: var(--x-line-width);
+	top: 0;
+	bottom: 0;
+	transform: translate(-50%);
+	-webkit-transform: translate(-50%);
+}
+
+.x-timeline_line-active {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	height: 0;
+	background: #16c612;
+	will-change: height;
+}
+
+.x-timeline-item_marker-inner.x-timeline-item_marker-inner-active {
+	background: #16c612;
+}
+
+.x-timeline {
+	--x-content-width: 100%;
+	--x-metacontent-width: 0;
+	--x-line-width: 3px;
+}
+
+main {
+	padding: 100px 0;
+	display: flex;
+	justify-content: center;
+}
+
+header {
+	background: #eee;
+	height: 10vh;
+}
+
+aside {
+	background: #eee;
+	height: 70vh;
+}
+.sidebar {
+	border-right: 1.717px solid #e7edf2;
+	background: #f5f9fc;
+	
+}
+.stickyyy{
+	position: sticky;
+	top: 0;
+}
+.banner-strip {
+	background: #f5f9fc;
+	box-shadow: 0px 0px 13.333051681518555px 0px rgba(0, 0, 0, 0.15);
+	padding: 24px 0;
+	.projects-cont-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.projects-cont {
+			font-weight: 500;
+			font-size: 24px;
+			strong {
+				margin-right: 16px;
+			}
+			img {
+				margin-right: 16px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+.content-details {
+    padding: 0 120px;
+	h2 {
+		color: #151e2c;
+		font-size: 48px;
+		margin-top: 140px;
+		margin-bottom: 24px;
+		&:first-child {
+			margin-top: 100px;
+		}
+	}
+	p {
+		font-size: 24px;
+        margin: 0;
+	}
+    img{
+        margin-top: 24px;
+    }
+    ul{
+        li{
+            margin-top: 24px;
+            color: #151e2c;
+            font-size: 24px;
+        }
+    }
+}
