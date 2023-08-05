@@ -60,7 +60,7 @@ const ProjectDetails = () => {
 	return (
 		<div className='project-details-wrapper'>
 			<div className='project-banner'>
-				<img src={banner} />
+				<img alt='sanjay-portfolio' src={banner} />
 			</div>
 			<div className='banner-strip'>
 				<div className='container'>
@@ -74,9 +74,9 @@ const ProjectDetails = () => {
 						</div>
 						<div className='projects-cont'>
 							<strong>Tools Used: </strong>
-							<img src={Figma} />
-							<img src={afterEffect} />
-							<img src={ai} />
+							<img alt='sanjay-portfolio' src={Figma} />
+							<img alt='sanjay-portfolio' src={afterEffect} />
+							<img alt='sanjay-portfolio' src={ai} />
 						</div>
 					</div>
 				</div>
@@ -345,7 +345,7 @@ const ProjectDetails = () => {
 								I also included some screenshots related to it."
 							</p>
 
-							<img src={research} />
+							<img alt='sanjay-portfolio' src={research} />
 
 							<h2
 								className={`scroll-div ${
@@ -410,7 +410,7 @@ const ProjectDetails = () => {
 								I got total of 22 responses Here are the insights of the data i
 								collected.
 							</div>
-							<img src={survey} />
+							<img alt='sanjay-portfolio' src={survey} />
 
 							<h2
 								className={`scroll-div ${
@@ -427,7 +427,7 @@ const ProjectDetails = () => {
 								data in a character.
 							</p>
 
-							<img src={paytmPersona} />
+							<img alt='sanjay-portfolio' src={paytmPersona} />
 
 							<h2
 								className={`scroll-div ${
@@ -459,7 +459,7 @@ const ProjectDetails = () => {
 								Based on my insights that i gathered from user research, I
 								decided to focus two main problems
 							</p>
-							<img src={highlights} />
+							<img alt='sanjay-portfolio' src={highlights} />
 
 							<h2
 								className={`scroll-div ${
@@ -474,7 +474,7 @@ const ProjectDetails = () => {
 								put a timer of 8 minute and started writing ideas come to my
 								mind. here are the results of crazy 8 ideas.
 							</p>
-							<img src={keyPoints} />
+							<img alt='sanjay-portfolio' src={keyPoints} />
 							<p>
 								Since i already have Paytm's app map and i am not making any
 								major changes in flows and architecture so i skipped to include
@@ -494,7 +494,7 @@ const ProjectDetails = () => {
 								ones that were easiest to use and enhanced the user's
 								experience. The following wireframes were the ones I finalized:
 							</p>
-							<img src={wireframes} />
+							<img alt='sanjay-portfolio' src={wireframes} />
 
 							<h2
 								className={`scroll-div ${
@@ -509,7 +509,7 @@ const ProjectDetails = () => {
 								had an open design system available, but was unable to find one.
 								As a result, I decided to create my own style guide and elements
 							</p>
-							<img src={styles} />
+							<img alt='sanjay-portfolio' src={styles} />
 
 							<h2
 								className={`scroll-div ${
@@ -525,7 +525,7 @@ const ProjectDetails = () => {
 								This allowed me to test the design with users and gather
 								feedback on the usability and overall experience.
 							</p>
-							<img src={hifi} />
+							<img alt='sanjay-portfolio' src={hifi} />
 
 							<h2
 								className={`scroll-div ${

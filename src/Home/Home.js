@@ -15,7 +15,7 @@ import specsCartBanner from '../assets/images/specskart-thumbnail.png';
 import sisucare from '../assets/images/sisucare-logo.svg';
 import sisucareBanner from '../assets/images/sisucare-thumbnail.png';
 import videoIcon from '../assets/images/motion-graphic/video-icon.svg';
-import pauseIcon from '../assets/images/motion-graphic/pause.jpg';
+
 
 // Motion Graphics
 import WFH from '../assets/images/motion-graphic/wfh-thumbnail.png';
@@ -42,7 +42,7 @@ import Annergetic from '../assets/images/motion-graphic/Annergetic-thumbnail.png
 import AnnergeticAnimation from '../assets/images/motion-graphic/Annergetic.mp4';
 
 import about from '../assets/images/smart-boy-about.png';
-import Footer from '../Footer/Footer';
+
 const Home = () => {
 	useEffect(() => {
 		var TxtType = function (el, toRotate, period) {
@@ -424,7 +424,7 @@ const Home = () => {
 					</p>
 				</div>
 				<div className='aboutme-img'>
-					<img src={about} />
+					<img alt='sanjay-portfolio' src={about} />
 				</div>
 			</div>
 		</div>

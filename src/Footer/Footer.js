@@ -9,9 +9,9 @@ const Footer = () => {
         <div className='container'>
             <div className='contact-title'>Contact</div>
             <div className='social-icons'>
-                <span> <img src={linkedin} /> thesanjayarora </span>
-                <span> <img src={behance} /> sanjuarora </span>
-                <span> <img src={gmail} /> arora5971@gmail.com </span>
+                <span> <img src={linkedin} alt='linkedIn' /> thesanjayarora </span>
+                <span> <img alt='sanjay-portfolio' src={behance} /> sanjuarora </span>
+                <span> <img alt='sanjay-portfolio' src={gmail} /> arora5971@gmail.com </span>
             </div>
         </div>
     </div>
