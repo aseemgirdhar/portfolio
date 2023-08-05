@@ -6,7 +6,7 @@ import afterEffect from '../assets/images/ae-icon.png';
 import ai from '../assets/images/ai-icon.png';
 import research from '../assets/images/paytm-sec-research.png';
 import survey from '../assets/images/paytm-survey.png';
-import paytmPersona from '../assets/images/paytm-persona.svg';
+import paytmPersona from '../assets/images/paytm-persona.jpg';
 import highlights from '../assets/images/paytm-crazy8.svg';
 import keyPoints from '../assets/images/paytm-keypoints.svg';
 import wireframes from '../assets/images/paytm-lowfi.png';
