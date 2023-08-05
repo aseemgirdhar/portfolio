@@ -62,6 +62,7 @@ const ProjectDetails = () => {
 			<div className='project-banner'>
 				<img alt='sanjay-portfolio' src={banner} />
 			</div>
+			
 			<div className='banner-strip'>
 				<div className='container'>
 					<div className='projects-cont-wrapper'>
